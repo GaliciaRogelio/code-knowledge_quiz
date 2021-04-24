@@ -1,6 +1,6 @@
 var timerEl = document.getElementById("countdown");
 var startBtn = document.getElementById("start-btn");
-var nextBtn = document.getElementById("next-btn");
+var nextBtn = document.querySelector(".next-btn");
 var questionContEl = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
 var answerBtnEl = document.getElementById("answer-buttons");
@@ -14,7 +14,7 @@ nextBtn.addEventListener('click', () => {
 });
 
 function startQuiz(){
-    count = 30;
+    count = 60;
     console.log('started');
     startBtn.classList.add('hide');
     randomQuestions = questions.sort(() => Math.random() - .5);
@@ -69,6 +69,7 @@ function selectAnswer(e) {
  function setStatusclass(element, correct) {
      clearStatusClass(element)
      if (correct) {
+         
          element.classList.add('correct')
      } else {
          element.classList.add('wrong')
@@ -140,7 +141,7 @@ var questions = [
 
 function timer() {
     count = count - 1;
-    if (count < 30) {
+    if (count < 60) {
         countdown.innerHTML = count;
     }
     if (count < 1) {

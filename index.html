@@ -8,25 +8,38 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-    <h2 class="ctdwn">Time: <span id="countdown" >30</span></h2>
-    <form class="scores" href="#">
-        <p>View High Scores</p>
-    </form>
-    <div class="container">
-        <div id="question-container">
+    <time class="ctdwn">Time: <span id="countdown" >60</span></time>
+    <button type="button" id="high-score-btn" class="scores">View High Scores</button>
+    <section class="container">
+        <div id="question-container" class="hide">
             <div id="question" class="number"></div>
             <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+                <button class="btn next-btn">Answer 1</button>
+                <button class="btn next-btn">Answer 2</button>
+                <button class="btn next-btn">Answer 3</button>
+                <button class="btn next-btn">Answer 4</button>
             </div>
         </div>
             <div class="controls">
                 <button id="start-btn" class="start-btn btn">Start</button>
-                <button id="next-btn" class="next-btn btn hide">Next</button>
             </div>
-    </div>
+            <div id="final-score">
+                <label for="final-score" class="btn hide">Final Score</label>
+            </div>
+            <div class="hide">
+                <label for="initials">Enter Initials</label>
+                <input type="text" id="initials-entry" placeholder="Enter Initials">
+                <button id="submit-initials" type="button" class="btn">Submit</button>
+            </div>
+    </section>
+
+    <section id="high-score-container">
+        <div class="hide">
+            <h2>High Scores</h2>
+        </div>
+
+        
+    </section>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
