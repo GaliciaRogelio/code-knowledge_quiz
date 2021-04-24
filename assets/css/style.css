@@ -1,71 +1,152 @@
-body {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.number {
-  font-size: xx-large;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.btn-grid {
-  display: grid;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.btn {
-  color:white;
-  background-color: purple;
-  border-radius: 5px;
-  padding: 15px 45px;
-  color: azure;
-  outline: none;
-}
-
-.btn:hover {
-  border-color: black;
-}
-
-.start-btn, .next-btn {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-}
-
-.scores {
-  position: absolute;
-  top: 20px;
-  width: 14%;
-  text-align: center;
-  background-position: left;
-  background-color: purple;
-  color: aliceblue;
-  border-radius: 10%;
-}
-
-.ctdwn {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  text-align: right;
-
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hide {
-  display: none;
-}
-
-
+:root{
+  --primary-color: black;
+  --secondary-color: purple;
+  --tertiary-color: white;
+  
+  }
+  
+  li{
+      padding-bottom: 3px;
+      color: var(--tertiary-color);
+      text-shadow: 1.5px 1px 3px var(--primary-color);
+      list-style-type: none;
+  }
+  
+  p{
+      color: var(--primary-color);
+      text-shadow: .5px .5px var(--secondary-color);
+      text-align: center;
+      font-size: xx-large;
+      font-family: sans-serif;
+  
+  }
+  h2{
+      font-family: sans-serif;
+      margin-top: -.5rem;
+  }
+  input{
+      text-align: center;
+  }
+  
+  .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+  
+    button {
+      display: -webkit-box;
+      font-family: sans-serif;
+      background-color: var(--secondary-color);
+      border-radius: 40px;
+      border: 3px double var(--tertiary-color);
+      color: var(--tertiary-color);
+      text-align: center;
+      font-size: 15px;
+      padding: 20px;
+      width: 200px;
+      margin-top: 3px;
+    }
+  
+    button:hover{
+        box-shadow: 4px 3px 6px var(--primary-color);
+    }
+  
+  #startpage{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  #countdown{
+      font-family: sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--tertiary-color);
+      font-size: larger;
+      text-shadow: .5px .5px var(--primary-color);
+      text-align: center;
+      width: max-content;
+      border-radius: 30px;
+  }
+  #quiz {
+      display: none;
+  }
+  
+  #result {
+      display: none;
+  }
+  
+  #gameover {
+      text-align: center;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  #highScore{
+      height: 1.5rem;
+      border: groove 2px;
+  }
+  
+  #high-scorePage{
+      display: none;
+      width: 50%;
+      border: solid;
+      border-color: silver;
+      border-bottom-style: groove;
+      padding-bottom: .3rem;
+      background: var(--secondary-color);
+  }
+  
+  #highscore-header{
+      display:flex;
+      justify-content: space-around;
+      border-bottom-style: outset;
+      margin-bottom: .5rem;
+      background-color: var(--secondary-color);
+      color: var(--tertiary-color);
+      font-family: sans-serif;
+  }
+  #highscoreContainer{
+      height: 100%;
+      width: 100%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  #initials{
+      margin: .5rem;
+      height: 1.75rem;
+  }
+  
+  #highscore-initials{
+      display: inline-block;
+      padding-left: 9.5rem;
+      font-family: sans-serif;
+      font-weight: bold;
+  }
+  
+  #highscore-score{
+      float: right;
+      padding-right: 8.75rem;
+      font-family: sans-serif;
+      font-weight: bold;
+  }
+  
+  #finalScore{
+      padding-bottom: 0.5rem;
+      font-size: x-large;
+      font-family: sans-serif;
+      font-weight: bold;
+  }
+  
+  #endGameBtns{
+      display: none;
+  }
   
